@@ -29,10 +29,12 @@ const CustomPagination = ({ position, bottom, padding, paginationColor }) => {
       padding={padding || 2}
       spacing={1}
     >
-      <Typography variant="body1">
-        Showing: {currentWing.totalFlatNumber[0].number} out of{" "}
-        {totalApartmentCountDetails.flats}
-      </Typography>
+      {totalApartmentCountDetails && (
+        <Typography variant="body1">
+          Showing: {currentWing.totalFlatNumber[0].number} out of{" "}
+          {totalApartmentCountDetails.flats}
+        </Typography>
+      )}
       <Pagination
         count={apartments.length}
         page={currentWing.id || 1}
