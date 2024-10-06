@@ -542,20 +542,32 @@
   ],
 
   "headerButtonMenu": [
-    { "buttonContent": "Payment Plan", "variant": "outlined" },
-    { "buttonContent": "Manage Parking", "variant": "outlined" },
-    { "buttonContent": "Manage Flat", "variant": "contained" }
+    {
+      "buttonContent": "Payment Plan",
+      "variant": "outlined",
+      "startIcon": "PaymentsRounded"
+    },
+    {
+      "buttonContent": "Manage Parking",
+      "variant": "outlined",
+      "startIcon": "LocalParkingRounded"
+    },
+    {
+      "buttonContent": "Manage Flat",
+      "variant": "contained",
+      "startIcon": "DomainAddRounded"
+    }
   ],
   "wingsButtonMenu": [
     {
       "buttonContent": "Export Details",
       "variant": "contained",
-      "startIcon": "ExitToAppRoundedIcon"
+      "startIcon": "ExitToAppRounded"
     },
     {
       "buttonContent": "Add Flat",
       "variant": "contained",
-      "startIcon": "AddRoundedIcon"
+      "startIcon": "AddRounded"
     }
   ],
 

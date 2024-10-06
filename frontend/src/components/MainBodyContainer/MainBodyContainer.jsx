@@ -7,15 +7,17 @@ import CustomFunctionalButton from "../CustomFunctionalButton/CustomFunctionalBu
 import PropertyDetails from "../PropertyDetails/PropertyDetails";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
 import { BookingMenuContextProvider } from "../../context/BookingMenuContext";
+import useWidth from "../../hooks/useWidth";
 
 const MainBodyContainer = () => {
   const { currentWing } = useCurrentApartmentsContext();
+  const width = useWidth();
 
   return (
     <Grid spacing={2} size={12} container marginBottom={1}>
       {currentWing ? (
         <>
-          <Grid container justifyContent="space-between" size={12}>
+          <Grid container justifyContent="space-around" size={12}>
             {currentWing.totalFlatNumber.map((item, index) => (
               <FlatDataContainer
                 key={index}
@@ -32,7 +34,7 @@ const MainBodyContainer = () => {
           </Grid>
           <Grid size={12} container justifyContent="space-between">
             <Grid
-              size={11}
+              size={{ xs: 10, md: 11 }}
               height={365}
               position="relative"
               boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"

@@ -22,7 +22,7 @@ const ApartmentFloor = ({ floor }) => {
         }}
       >
         {floor.flats.map((flat, index) => (
-          <Stack direction="column" position="relative">
+          <Stack direction="column" position="relative" key={index}>
             <CustomIcon>
               <ApartmentRoundedIcon
                 sx={{

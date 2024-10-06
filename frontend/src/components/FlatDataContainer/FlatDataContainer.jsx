@@ -18,7 +18,11 @@ const FlatDataContainer = ({
   const { currentWing } = useCurrentApartmentsContext();
   return (
     <Grid
-      size={12 / currentWing.totalFlatNumber.length - 0.1}
+      size={{
+        xs: 9,
+        sm: 5.5,
+        md: 12 / currentWing.totalFlatNumber.length - 0.1,
+      }}
       height={height}
       boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
       borderRadius={boxBorderRadius}
@@ -27,6 +31,7 @@ const FlatDataContainer = ({
       padding={boxPadding}
       alignItems="center"
       direction="column"
+      marginBottom={2}
     >
       <Grid
         borderBottom="1.5px solid grey"

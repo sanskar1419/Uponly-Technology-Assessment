@@ -6,24 +6,28 @@ import useCurrentWing from "../../hooks/useCurrentWing";
 import { useApartmentsCountContext } from "../../context/ApartmentsCountContext";
 import { useApartmentsContext } from "../../context/ApartmentContext";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
+import useWidth from "../../hooks/useWidth";
 
 const CustomPagination = ({ position, bottom, padding, paginationColor }) => {
   const { handleWingChange } = useCurrentWing();
   const { totalApartmentCountDetails } = useApartmentsCountContext();
   const { apartments } = useApartmentsContext();
   const { currentWing } = useCurrentApartmentsContext();
+  const width = useWidth();
 
   return (
     <Grid
       position={position || "absolute"}
       container
-      bottom={bottom || "-55px"}
+      bottom={width === "xs" || width === "sm" ? "-90px" : "-55px"}
       direction="row"
-      justifyContent="space-between"
+      justifyContent={
+        width === "xs" || width === "sm" ? "center" : "space-between"
+      }
       alignItems="center"
       width="100%"
       padding={padding || 2}
-      p
+      spacing={1}
     >
       <Typography variant="body1">
         Showing: {currentWing.totalFlatNumber[0].number} out of{" "}

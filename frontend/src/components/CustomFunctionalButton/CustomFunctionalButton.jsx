@@ -30,7 +30,7 @@ const CustomFunctionalButton = () => {
 
   return (
     <Grid
-      size={1}
+      size={{ xs: 2, md: 1 }}
       boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
       borderRadius={2}
       direction="column"

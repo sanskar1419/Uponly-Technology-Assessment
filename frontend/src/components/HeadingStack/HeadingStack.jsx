@@ -11,10 +11,15 @@ const HeadingStack = ({
   subHeadingColor,
   heading,
   subHeading,
+  headingFontSize,
 }) => {
   return (
-    <Grid2 size={gridSize} padding={gridPadding}>
-      <Typography variant={mainHeadingVariant} component="h2">
+    <Grid2 size={{ xs: 4, md: 3 }} padding={gridPadding}>
+      <Typography
+        variant={mainHeadingVariant}
+        fontSize={headingFontSize}
+        component="h2"
+      >
         {heading}
       </Typography>
       <Typography
