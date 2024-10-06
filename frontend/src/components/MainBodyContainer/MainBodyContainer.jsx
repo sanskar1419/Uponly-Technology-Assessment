@@ -6,6 +6,7 @@ import CustomPagination from "../CustomPagination/CustomPagination";
 import CustomFunctionalButton from "../CustomFunctionalButton/CustomFunctionalButton";
 import PropertyDetails from "../PropertyDetails/PropertyDetails";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
+import { BookingMenuContextProvider } from "../../context/BookingMenuContext";
 
 const MainBodyContainer = () => {
   const { currentWing } = useCurrentApartmentsContext();
@@ -37,8 +38,11 @@ const MainBodyContainer = () => {
               boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
               container
               borderRadius={2}
+              direction="column"
             >
-              <PropertyDetails />
+              <BookingMenuContextProvider>
+                <PropertyDetails />
+              </BookingMenuContextProvider>
               <CustomPagination />
             </Grid>
             <CustomFunctionalButton />

@@ -19,7 +19,7 @@ import '@fontsource/roboto/700.css';
   height: 97vh;
   overflow-y: auto;
   /* border: 2px solid blue; */
-  -ms-overflow-style: 0; /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   
 }

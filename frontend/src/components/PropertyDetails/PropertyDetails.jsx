@@ -4,13 +4,20 @@ import { useCurrentApartmentsContext } from "../../context/CurrentApartmentConte
 import HeadingStack from "../HeadingStack/HeadingStack";
 import useFetchButtonMenu from "../../hooks/useFetchButtonMenu";
 import GroupedButton from "../GroupedButton/GroupedButton";
+import ApartmentFloors from "../ApartmentFloors/ApartmentFloors";
+import useBookingMenu from "../../hooks/useBookingMenu";
 
 const PropertyDetails = () => {
   const { currentWing } = useCurrentApartmentsContext();
   const { wingsButtonMenu, fetchWingsButtonMenu } = useFetchButtonMenu();
+  const { fetchBookingMenu } = useBookingMenu();
 
   useEffect(() => {
     fetchWingsButtonMenu();
+  }, []);
+
+  useEffect(() => {
+    fetchBookingMenu();
   }, []);
 
   return (
@@ -46,6 +53,9 @@ const PropertyDetails = () => {
             isIcon
           />
         )}
+      </Grid2>
+      <Grid2 height="80%">
+        <ApartmentFloors />
       </Grid2>
     </>
   );

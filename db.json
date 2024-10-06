@@ -4,10 +4,10 @@
       "id": 1,
       "wing": "A",
       "totalFlatNumber": [
-        { "type": "total", "number": 39 },
-        { "type": "booked", "number": 16 },
-        { "type": "available", "number": 13 },
-        { "type": "blocked", "number": 10 }
+        { "type": "total", "number": 50 },
+        { "type": "booked", "number": 22 },
+        { "type": "available", "number": 15 },
+        { "type": "blocked", "number": 13 }
       ],
       "floors": [
         {
@@ -34,7 +34,18 @@
             { "flatNumber": 204, "status": "Booked" },
             { "flatNumber": 205, "status": "Blocked" },
             { "flatNumber": 206, "status": "Booked" },
-            { "flatNumber": 207, "status": "Booked" }
+            { "flatNumber": 207, "status": "Booked" },
+            { "flatNumber": 208, "status": "Blocked" },
+            { "flatNumber": 209, "status": "Available" },
+            { "flatNumber": 210, "status": "Available" },
+            { "flatNumber": 211, "status": "Booked" },
+            { "flatNumber": 212, "status": "Blocked" },
+            { "flatNumber": 213, "status": "Booked" },
+            { "flatNumber": 214, "status": "Booked" },
+            { "flatNumber": 215, "status": "Booked" },
+            { "flatNumber": 216, "status": "Blocked" },
+            { "flatNumber": 217, "status": "Booked" },
+            { "flatNumber": 218, "status": "Booked" }
           ]
         },
         {
@@ -491,10 +502,10 @@
   ],
 
   "totalFlatsNumbers": {
-    "flats": 184,
-    "available": 77,
-    "booked": 66,
-    "blocked": 41
+    "flats": 195,
+    "available": 79,
+    "booked": 72,
+    "blocked": 44
   },
 
   "functionalMenu": [
@@ -546,5 +557,55 @@
       "variant": "contained",
       "startIcon": "AddRoundedIcon"
     }
-  ]
+  ],
+
+  "bookingSchema": {
+    "booked": [
+      { "type": "Edit Flat", "iconName": "BorderColorRounded", "href": "#" },
+      {
+        "type": "Record Transaction",
+        "iconName": "RemoveRedEyeRounded",
+        "href": "#"
+      },
+      {
+        "type": "Cancel Booking",
+        "iconName": "CloseRounded",
+        "href": "#"
+      },
+      {
+        "type": "Booking Details",
+        "iconName": "DvrRounded",
+        "href": "#"
+      }
+    ],
+    "available": [
+      {
+        "type": "Book Flat",
+        "iconName": "DoneRounded",
+        "href": "#"
+      },
+      {
+        "type": "Block Flat",
+        "iconName": "RemoveRedEyeRounded",
+        "href": "#"
+      },
+      {
+        "type": "Edit Flat",
+        "iconName": "BorderColorRounded",
+        "href": "#"
+      }
+    ],
+    "blocked": [
+      {
+        "type": "Un-Block Flat",
+        "iconName": "UndoRounded",
+        "href": "#"
+      },
+      {
+        "type": "Edit Flat",
+        "iconName": "BorderColorRounded",
+        "href": "#"
+      }
+    ]
+  }
 }
