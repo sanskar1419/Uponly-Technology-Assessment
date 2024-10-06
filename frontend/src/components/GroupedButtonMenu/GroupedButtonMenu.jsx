@@ -1,24 +1,32 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import * as React from "react";
+import ApartmentMenuItem from "../ApartmentMenuItem/ApartmentMenuItem";
+
+/* Importing Material UI Component */
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
-
 import IconButton from "@mui/material/IconButton";
-
 import Tooltip from "@mui/material/Tooltip";
 
+/* Importing Material UI Component */
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import ApartmentMenuItem from "../ApartmentMenuItem/ApartmentMenuItem";
 
+/* GroupedButtonMenu functional component */
 export default function GroupedButtonMenu({ menu }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+  /* Function to handel click outside of element */
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  /* Function to close the menu */
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>

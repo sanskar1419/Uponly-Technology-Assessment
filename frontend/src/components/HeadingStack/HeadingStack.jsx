@@ -1,6 +1,10 @@
-import { Grid2, Typography } from "@mui/material";
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
 
+/* Importing Material UI Component */
+import { Grid2, Typography } from "@mui/material";
+
+/* HeadingStack functional arrow component */
 const HeadingStack = ({
   gridSize,
   gridPadding,
@@ -34,4 +38,5 @@ const HeadingStack = ({
   );
 };
 
+/* Default Export */
 export default HeadingStack;

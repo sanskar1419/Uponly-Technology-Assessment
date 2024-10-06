@@ -1,13 +1,17 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
-import Grid from "@mui/material/Grid2";
-import Typography from "@mui/material/Typography";
-import Pagination from "@mui/material/Pagination";
 import useCurrentWing from "../../hooks/useCurrentWing";
 import { useApartmentsCountContext } from "../../context/ApartmentsCountContext";
 import { useApartmentsContext } from "../../context/ApartmentContext";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
 import useWidth from "../../hooks/useWidth";
 
+/* Importing Material UI Component */
+import Grid from "@mui/material/Grid2";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
+
+/* CustomPagination functional arrow component */
 const CustomPagination = ({ position, bottom, padding, paginationColor }) => {
   const { handleWingChange } = useCurrentWing();
   const { totalApartmentCountDetails } = useApartmentsCountContext();
@@ -45,4 +49,5 @@ const CustomPagination = ({ position, bottom, padding, paginationColor }) => {
   );
 };
 
+/* Default Export */
 export default CustomPagination;

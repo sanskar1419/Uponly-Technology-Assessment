@@ -1,6 +1,8 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+/* Creating Hook */
 const useWidth = () => {
   const theme = useTheme();
   const keys = [...theme.breakpoints.keys].reverse();
@@ -12,4 +14,5 @@ const useWidth = () => {
   );
 };
 
+/* Default Export */
 export default useWidth;

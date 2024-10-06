@@ -1,8 +1,10 @@
+/* Material UI Font Import */
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+/* Hiding Scrollbar */
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -15,6 +17,7 @@ import '@fontsource/roboto/700.css';
   }
 }
 
+/* Root Styling */
 #root{
   height: 97vh;
   overflow-y: auto;

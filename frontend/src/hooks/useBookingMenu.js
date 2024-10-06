@@ -1,9 +1,13 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import { useState } from "react";
 import { useBookingMenuContext } from "../context/BookingMenuContext";
 
+/* Creating Hook */
 const useBookingMenu = () => {
   const [loading, setLoading] = useState(false);
   const { setBookingSchema } = useBookingMenuContext();
+
+  /* Function to fetch booking menu */
   const fetchBookingMenu = async () => {
     setLoading(true);
     try {
@@ -22,4 +26,6 @@ const useBookingMenu = () => {
 
   return { loading, fetchBookingMenu };
 };
+
+/* Default Export */
 export default useBookingMenu;

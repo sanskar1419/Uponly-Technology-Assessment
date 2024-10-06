@@ -1,33 +1,35 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import * as React from "react";
+
+/* Importing Material UI Component */
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import PersonAdd from "@mui/icons-material/PersonAdd";
-import Settings from "@mui/icons-material/Settings";
-import Logout from "@mui/icons-material/Logout";
-import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import { Container, Grid2 } from "@mui/material";
+import { Grid2 } from "@mui/material";
 
-import BorderColorRoundedIcon from "@mui/icons-material/BorderColorRounded";
-import RemoveRedEyeRoundedIcon from "@mui/icons-material/RemoveRedEyeRounded";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import DvrRoundedIcon from "@mui/icons-material/DvrRounded";
+/* Importing Material UI icon */
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+
+/* Importing Components */
 import ApartmentMenuItem from "../ApartmentMenuItem/ApartmentMenuItem";
+
+/* Importing Context */
 import { useBookingMenuContext } from "../../context/BookingMenuContext";
 
+/* AccountMenu functional component */
 export default function AccountMenu({ flat }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const { bookingSchema } = useBookingMenuContext();
 
+  /* Function to handel click outside of element */
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  /* Function to setAnchorEl */
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -125,7 +127,6 @@ export default function AccountMenu({ flat }) {
             Flat No. - {flat.flatNumber}
           </div>
 
-          {/* <Divider /> */}
           <Grid2 paddingY={2}>
             {flat.status === "Available" && (
               <>

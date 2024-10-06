@@ -1,9 +1,13 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import { useState } from "react";
 import { useApartmentsCountContext } from "../context/ApartmentsCountContext";
 
+/* Creating Hook */
 const useFetchApartmentCount = () => {
   const [loading, setLoading] = useState(false);
   const { setTotalApartmentCountDetails } = useApartmentsCountContext();
+
+  /* Function to fetch apartments count */
   const fetchApartmentsCount = async () => {
     setLoading(true);
     try {
@@ -22,4 +26,6 @@ const useFetchApartmentCount = () => {
 
   return { loading, fetchApartmentsCount };
 };
+
+/* Default Export */
 export default useFetchApartmentCount;

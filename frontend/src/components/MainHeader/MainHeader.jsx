@@ -1,17 +1,23 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import React, { useEffect } from "react";
+import useFetchButtonMenu from "../../hooks/useFetchButtonMenu";
+import useWidth from "../../hooks/useWidth";
 
-import Grid from "@mui/material/Grid2";
+/* Importing Components */
 import HeadingStack from "../HeadingStack/HeadingStack";
 import SelectElement from "../SelectElement/SelectElement";
-import useFetchButtonMenu from "../../hooks/useFetchButtonMenu";
 import GroupedButton from "../GroupedButton/GroupedButton";
-import useWidth from "../../hooks/useWidth";
 import GroupedButtonMenu from "../GroupedButtonMenu/GroupedButtonMenu";
 
+/* Importing Material UI Component */
+import Grid from "@mui/material/Grid2";
+
+/* MainHeader functional arrow component */
 const MainHeader = () => {
   const { headerButtonMenu, fetchHeaderButtonMenu } = useFetchButtonMenu();
   const width = useWidth();
 
+  /* Fetching header button menu */
   useEffect(() => {
     fetchHeaderButtonMenu();
   }, []);
@@ -70,4 +76,5 @@ const MainHeader = () => {
   );
 };
 
+/* Default Export */
 export default MainHeader;

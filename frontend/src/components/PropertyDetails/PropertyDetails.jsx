@@ -1,24 +1,32 @@
-import { Grid2 } from "@mui/material";
+/* Importing necessary files, module, method, hooks, context etc. */
 import React, { useEffect } from "react";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
-import HeadingStack from "../HeadingStack/HeadingStack";
 import useFetchButtonMenu from "../../hooks/useFetchButtonMenu";
-import GroupedButton from "../GroupedButton/GroupedButton";
-import ApartmentFloors from "../ApartmentFloors/ApartmentFloors";
 import useBookingMenu from "../../hooks/useBookingMenu";
 import useWidth from "../../hooks/useWidth";
+
+/* Importing Components */
+import HeadingStack from "../HeadingStack/HeadingStack";
+import GroupedButton from "../GroupedButton/GroupedButton";
+import ApartmentFloors from "../ApartmentFloors/ApartmentFloors";
 import GroupedButtonMenu from "../GroupedButtonMenu/GroupedButtonMenu";
 
+/* Importing Material UI Component */
+import { Grid2 } from "@mui/material";
+
+/* PropertyDetails functional arrow component */
 const PropertyDetails = () => {
   const { currentWing } = useCurrentApartmentsContext();
   const { wingsButtonMenu, fetchWingsButtonMenu } = useFetchButtonMenu();
   const { fetchBookingMenu } = useBookingMenu();
   const width = useWidth();
 
+  /* Fetching Wing Menu Button */
   useEffect(() => {
     fetchWingsButtonMenu();
   }, []);
 
+  /* Fetching Booking menu */
   useEffect(() => {
     fetchBookingMenu();
   }, []);
@@ -72,4 +80,5 @@ const PropertyDetails = () => {
   );
 };
 
+/* Default Export */
 export default PropertyDetails;

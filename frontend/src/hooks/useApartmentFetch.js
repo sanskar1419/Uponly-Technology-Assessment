@@ -1,10 +1,13 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import { useState } from "react";
 import { useApartmentsContext } from "../context/ApartmentContext";
 
+/* Creating Hook */
 const useFetchApartment = () => {
   const [loading, setLoading] = useState(false);
   const { setApartments } = useApartmentsContext();
 
+  /* Function to fetch apartments */
   const fetchApartments = async () => {
     setLoading(true);
     try {
@@ -23,4 +26,6 @@ const useFetchApartment = () => {
 
   return { loading, fetchApartments };
 };
+
+/* Default Export */
 export default useFetchApartment;

@@ -1,8 +1,11 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
 import { useApartmentsContext } from "../../context/ApartmentContext";
-import useCurrentWing from "../../hooks/useCurrentWing";
 
+/* Importing Material UI Component */
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+
+/* SelectElement functional arrow component */
 const SelectElement = ({ placeholder, selectHeight, minWidth }) => {
   const { apartments } = useApartmentsContext();
 
@@ -34,4 +37,5 @@ const SelectElement = ({ placeholder, selectHeight, minWidth }) => {
   );
 };
 
+/* Default Export */
 export default SelectElement;

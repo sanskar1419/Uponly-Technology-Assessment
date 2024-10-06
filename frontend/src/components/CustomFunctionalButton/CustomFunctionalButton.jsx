@@ -1,17 +1,25 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import React, { useEffect, useState } from "react";
-import { Stack, Typography } from "@mui/material";
-import CustomIcon from "../CustomIcon/CustomIcon";
-import Grid from "@mui/material/Grid2";
 
+/* Importing Components */
+import CustomIcon from "../CustomIcon/CustomIcon";
+
+/* Importing Material UI Component */
+import Grid from "@mui/material/Grid2";
+import { Stack } from "@mui/material";
+
+/* Importing Material UI icons */
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import PaymentsRoundedIcon from "@mui/icons-material/PaymentsRounded";
 import FilePresentRoundedIcon from "@mui/icons-material/FilePresentRounded";
 import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
 import NoteAltRoundedIcon from "@mui/icons-material/NoteAltRounded";
 
+/* CustomFunctionalButton functional arrow component */
 const CustomFunctionalButton = () => {
   const [functionMenu, setFunctionMenu] = useState(null);
 
+  /* Fetching functional menu on mounting */
   useEffect(() => {
     const fetchMenu = async () => {
       try {
@@ -110,4 +118,5 @@ const CustomFunctionalButton = () => {
   );
 };
 
+/* Default Export */
 export default CustomFunctionalButton;

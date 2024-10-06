@@ -1,11 +1,13 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import { useState } from "react";
-import { useApartmentsCountContext } from "../context/ApartmentsCountContext";
 
+/* Creating Hook */
 const useFetchButtonMenu = () => {
   const [loading, setLoading] = useState(false);
   const [headerButtonMenu, setHeaderButtonMenu] = useState(null);
   const [wingsButtonMenu, setWingsButtonMenu] = useState(null);
 
+  /* Function to fetch header menu button */
   const fetchHeaderButtonMenu = async () => {
     setLoading(true);
     try {
@@ -22,6 +24,7 @@ const useFetchButtonMenu = () => {
     }
   };
 
+  /* Function to fetch wings menu button */
   const fetchWingsButtonMenu = async () => {
     setLoading(true);
     try {
@@ -46,4 +49,6 @@ const useFetchButtonMenu = () => {
     wingsButtonMenu,
   };
 };
+
+/* Default Export */
 export default useFetchButtonMenu;

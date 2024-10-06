@@ -1,5 +1,7 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
 
+/* CustomIcon functional arrow component */
 const CustomIcon = ({
   width,
   height,
@@ -27,4 +29,5 @@ const CustomIcon = ({
   );
 };
 
+/* Default Export */
 export default CustomIcon;

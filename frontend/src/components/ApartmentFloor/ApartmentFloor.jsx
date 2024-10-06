@@ -1,9 +1,17 @@
-import { Divider, Grid2, Stack, Typography } from "@mui/material";
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
-import CustomIcon from "../CustomIcon/CustomIcon";
+
+/* Importing Material UI Component */
+import { Divider, Grid2, Stack, Typography } from "@mui/material";
+
+/* Importing Material UI icons */
 import ApartmentRoundedIcon from "@mui/icons-material/ApartmentRounded";
+
+/* Importing Components */
+import CustomIcon from "../CustomIcon/CustomIcon";
 import AccountMenu from "../ApartmentMenu/ApartmentMenu";
 
+/* ApartmentFloor functional arrow component */
 const ApartmentFloor = ({ floor }) => {
   return (
     <Grid2 width="100%">
@@ -49,4 +57,5 @@ const ApartmentFloor = ({ floor }) => {
   );
 };
 
+/* Default Export */
 export default ApartmentFloor;

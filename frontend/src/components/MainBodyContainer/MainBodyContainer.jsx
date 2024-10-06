@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Grid from "@mui/material/Grid2";
-import FlatDataContainer from "../FlatDataContainer/FlatDataContainer";
-import CustomPagination from "../CustomPagination/CustomPagination";
-
-import CustomFunctionalButton from "../CustomFunctionalButton/CustomFunctionalButton";
-import PropertyDetails from "../PropertyDetails/PropertyDetails";
+/* Importing necessary files, module, method, hooks, context etc. */
+import React from "react";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
 import { BookingMenuContextProvider } from "../../context/BookingMenuContext";
-import useWidth from "../../hooks/useWidth";
 
+/* Importing Material UI Component */
+import Grid from "@mui/material/Grid2";
+
+/* Importing Components */
+import FlatDataContainer from "../FlatDataContainer/FlatDataContainer";
+import CustomPagination from "../CustomPagination/CustomPagination";
+import CustomFunctionalButton from "../CustomFunctionalButton/CustomFunctionalButton";
+import PropertyDetails from "../PropertyDetails/PropertyDetails";
+
+/* MainBodyContainer functional arrow component */
 const MainBodyContainer = () => {
   const { currentWing } = useCurrentApartmentsContext();
-  const width = useWidth();
 
   return (
     <Grid spacing={2} size={12} container marginBottom={1}>
@@ -55,4 +58,5 @@ const MainBodyContainer = () => {
   );
 };
 
+/* Default Export */
 export default MainBodyContainer;

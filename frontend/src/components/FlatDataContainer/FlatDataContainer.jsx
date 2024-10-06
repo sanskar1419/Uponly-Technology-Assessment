@@ -1,10 +1,18 @@
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
-import Grid from "@mui/material/Grid2";
-import { Typography } from "@mui/material";
-import CustomIcon from "../CustomIcon/CustomIcon";
-import ApartmentRoundedIcon from "@mui/icons-material/ApartmentRounded";
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
 
+/* Importing Components */
+import CustomIcon from "../CustomIcon/CustomIcon";
+
+/* Importing Material UI Component */
+import Grid from "@mui/material/Grid2";
+import { Typography } from "@mui/material";
+
+/* Importing Material UI icon */
+import ApartmentRoundedIcon from "@mui/icons-material/ApartmentRounded";
+
+/* FlatDataContainer functional arrow component */
 const FlatDataContainer = ({
   item,
   height,
@@ -35,7 +43,6 @@ const FlatDataContainer = ({
     >
       <Grid
         borderBottom="1.5px solid grey"
-        // height={30}
         width="100%"
         container
         justifyContent="space-between"
@@ -77,4 +84,5 @@ const FlatDataContainer = ({
   );
 };
 
+/* Default Export */
 export default FlatDataContainer;

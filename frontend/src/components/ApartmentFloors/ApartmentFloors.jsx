@@ -1,8 +1,13 @@
-import { Grid2 } from "@mui/material";
+/* Importing necessary files, module, method, hooks, context etc. */
 import React from "react";
+
+/* Importing Context */
 import { useCurrentApartmentsContext } from "../../context/CurrentApartmentContext";
+
+/* Importing Components */
 import ApartmentFloor from "../ApartmentFloor/ApartmentFloor";
 
+/* ApartmentFloors functional arrow component */
 const ApartmentFloors = () => {
   const { currentWing } = useCurrentApartmentsContext();
 
@@ -26,4 +31,5 @@ const ApartmentFloors = () => {
   );
 };
 
+/* Default Export */
 export default ApartmentFloors;
