@@ -21,6 +21,12 @@ This project simulates an apartment list page where users can:
 - Book and un block a flat
 - Responsive design
 
+To view the web application go to this link
+
+```bash
+   https://uponly-frontend-6l3ozyztd-sanskar-guptas-projects.vercel.app/
+```
+
 ---
 
 ## Tech Stack
