@@ -31,8 +31,9 @@ To view the web application go to this link
 
 ## Tech Stack
 
-**Frontend:** ReactJs, CSS and Material UI
-**Backend:** Json Server@0.17.1 and cors
+1. **Frontend:** ReactJs, CSS and Material UI
+
+2. **Backend:** Json Server@0.17.1 and cors
 
 ---
 
