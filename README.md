@@ -24,7 +24,7 @@ This project simulates an apartment list page where users can:
 To view the web application go to this link
 
 ```bash
-   https://uponly-frontend-6l3ozyztd-sanskar-guptas-projects.vercel.app/
+   https://uponly-frontend.vercel.app/
 ```
 
 ---
