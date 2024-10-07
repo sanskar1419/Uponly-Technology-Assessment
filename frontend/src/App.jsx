@@ -12,6 +12,7 @@ import MainHeader from "./components/MainHeader/MainHeader";
 /* Importing Material UI Component */
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
+import { CircularProgress } from "@mui/material";
 
 /* App functional arrow component */
 const App = () => {
@@ -38,18 +39,34 @@ const App = () => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-      }}
-      className="no-scrollbar"
-      padding={1.5}
-    >
-      <Grid container spacing={2}>
-        <MainHeader />
-        <MainBodyContainer />
-      </Grid>
-    </Box>
+    <>
+      {apartments ? (
+        <Box
+          sx={{
+            flexGrow: 1,
+          }}
+          className="no-scrollbar"
+          padding={1.5}
+        >
+          <Grid container spacing={2}>
+            <MainHeader />
+            <MainBodyContainer />
+          </Grid>
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            width: "100vw",
+            height: "100vh",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <CircularProgress size="3rem" />
+        </Box>
+      )}
+    </>
   );
 };
 
